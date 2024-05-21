@@ -1,0 +1,53 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Header Styles */
+header {
+    margin-bottom: 20px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px 0;
+}
+
+.container h1, .container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container p {
+    text-align: justify;
+}
+
+li {
+    list-style-type: none;
+    padding: 5px 0;
+}
+
+.card {
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

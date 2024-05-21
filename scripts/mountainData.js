@@ -1,3 +1,4 @@
+
 const mountainsArray = [
     {
         name: "Mt. Washington",
