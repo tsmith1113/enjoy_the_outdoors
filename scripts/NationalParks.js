@@ -1,3 +1,5 @@
+"use strict";
+
 const locationDropdown = document.getElementById("locationDropdown");
         const parkTypeDropdown = document.getElementById("parkTypeDropdown");
         const parkDetailRow = document.getElementById("parkDetailRow");
@@ -62,12 +64,14 @@ const locationDropdown = document.getElementById("locationDropdown");
                 selectedParks = selectedParks.filter(park => park.LocationName.includes(selectedType));
             } else {
                 console.log("Please select a park type");
+                selectedParks = [];
             }
 
-            if (selectedParks.length > 0) {
+            if (selectedParks.length > 0){
                 displayParkDetails(selectedParks[0]);
-            } else {
-                console.log('No parks found for the selected criteria.');
+            }else{
+                console.log('No parks found for the selected criteria');
+                alert('No parks of the selected type are available in the selected location');
             }
         }
 
@@ -88,6 +92,7 @@ const locationDropdown = document.getElementById("locationDropdown");
             // Show detail row
             showDetailRow();
         }
+        
 
         function showDetailRow() {
             parkDetailRow.style.display = "block";
