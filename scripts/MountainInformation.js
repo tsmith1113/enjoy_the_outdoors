@@ -6,6 +6,7 @@ const mountainDesc = document.getElementById("mountainDesc");
 const mountainElevation = document.getElementById("mountainElevation");
 const mountainEffort = document.getElementById("mountainEffort");
 const mountainImg = document.getElementById("mountainImg");
+const mountainCoords = document.getElementById("mountainCoords")
 
 window.onload = () => {
     console.log("onload");
@@ -49,6 +50,7 @@ function displayMountainDetails(mountain){
     mountainElevation.innerHTML = `Elevation: ${mountain.elevation} feet`;
     mountainEffort.innerHTML = `Effort: ${mountain.effort}`;
     mountainImg.src = mountain.img;
+    mountainCoords.innerHTML = `Coordinates: ${mountain.coords.lat},${mountain.coords.lng}`;
 
     // Show detail row
     showDetailRow();
@@ -65,4 +67,5 @@ function hideDetailRow(){
     mountainElevation.innerHTML = "";
     mountainEffort.innerHTML = "";
     mountainImg.src = "";
+    mountainCoords.innerHTML = "";
 }
