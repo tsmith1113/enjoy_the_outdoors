@@ -49,7 +49,7 @@ function displayMountainDetails(mountain){
     mountainDesc.innerHTML = mountain.desc;
     mountainElevation.innerHTML = `Elevation: ${mountain.elevation} feet`;
     mountainEffort.innerHTML = `Effort: ${mountain.effort}`;
-    mountainImg.src = mountain.img;
+    mountainImg.src = `images/${mountain.img}`;
     mountainCoords.innerHTML = `Coordinates: ${mountain.coords.lat},${mountain.coords.lng}`;
 
     // Show detail row
