@@ -63,6 +63,7 @@ function onDropdownChange(event) {
     }
     displayParkDetails(selectedParks);
 }
+// Function to update the park type dropdown based on the selected park
 function updateParkTypeDrown(parks){
     parkTypeDropdown.innerHTML = ""; // clear existing options
     const parkTypes = [...new Set(parks.map(park => park.LocationName.split(" "[0])))];
@@ -74,6 +75,7 @@ function updateParkTypeDrown(parks){
     })
     
 }
+// Function to display the details of the selected group
 function displayParkDetails(parks) {
     parkDetailsContainer.innerHTML = "";
     parks.forEach(park => {
@@ -84,6 +86,7 @@ function displayParkDetails(parks) {
         cardTitle.className = "card-title";
         cardTitle.textContent = park.LocationName;
 
+        // Create the card conten with park details
         const cardContent = `
             <p>Park Location ID: ${park.LocationID}</p>
             <p>Name: ${park.LocationName}</p>
@@ -120,7 +123,8 @@ function onParkTypeSearch(){
     const options = parkTypeDropdown.options;
 
     Array.from(options).forEach(option => {
-        const text = option.textContent.toLowerCase();
+        const text = option.textContent.toLowerCase();// Get the text of the option and convert to lower case
+        // show or hide the option based on whether it macthes the search term
         if(text.includes(searchTerm)){
             option.style.display = "";
         }else{
