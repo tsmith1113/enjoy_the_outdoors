@@ -64,7 +64,7 @@ function onDropdownChange(event) {
     displayParkDetails(selectedParks);
 }
 function updateParkTypeDrown(parks){
-    parkTypeDropdown.innerHtml = ""; // clear existing options
+    parkTypeDropdown.innerHTML = ""; // clear existing options
     const parkTypes = [...new Set(parks.map(park => park.LocationName.split(" "[0])))];
     parkTypes.forEach(type =>{
         const option = document.createElement("option");
@@ -72,6 +72,7 @@ function updateParkTypeDrown(parks){
         option.textContent = type;
         parkTypeDropdown.appendChild(option);
     })
+    
 }
 function displayParkDetails(parks) {
     parkDetailsContainer.innerHTML = "";
@@ -125,5 +126,6 @@ function onParkTypeSearch(){
         }else{
             option.style.display = "none";
         }
-    })
+    });
+    console.log("Park type search completed", searchTerm);
 }
